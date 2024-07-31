@@ -2,14 +2,7 @@ import userModel from "../models/userModel.js";
 
 export const adminMiddleware = async (req, res, next) => {
   try {
-    const user = await userModel.findOne({ email: req.body.email });
-    if (!user) {
-      return res.status(403).send({
-        success: false,
-        message: "Access Denied. No creditials provided!",
-      });
-    }
-
+    const user = await userModel.findById(req.body.id);
     if (user.userType !== "admin") {
       return res.status(401).send({
         success: false,

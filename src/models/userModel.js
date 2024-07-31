@@ -65,10 +65,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please provide a phone number"],
     },
-    usertype: {
+    userType: {
       type: String,
       required: [true, "Please provide a userType"],
-      default: "admin",
+      default: "developer",
       enum: [
         "admin",
         "ceo",
