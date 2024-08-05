@@ -8,12 +8,12 @@ import startCronJob from "../src/crons/cronjob.js";
 
 const port = ENVIRONMENT.APP.PORT; 
 const appName = ENVIRONMENT.APP.NAME;
-// redis.connect(); // Connect to Redis
+redis.connect(); // Connect to Redis
 
 
 app.listen(port, async () => {
   new winston.transports.Console(`==> "${appName}" listening on port: ${port}!`.white.bgMagenta);
   await connectDB();
   // Start Cron Job
-// startCronJob();
+startCronJob();
 });

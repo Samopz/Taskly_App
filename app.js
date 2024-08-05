@@ -106,7 +106,7 @@ app.use(morgan("dev")); // log requests to the console
 (async () => {
   try {
     const invitRoutes = await import("./src/routes/invitRoutes.js");
-    app.use("/api/v1/invit", invitRoutes.default);
+    app.use("/api/v1/invite", invitRoutes.default);
   } catch (error) {
     console.error("Failed to load invitation routes:", error);
   }

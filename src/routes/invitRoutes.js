@@ -7,7 +7,7 @@ const router = express.Router();
 // Define routes
 router.post("/create", authMiddleware, InvitationController.createInvitation);
 router.put("/update/:id", authMiddleware, InvitationController.updateInvitation);
-router.get("/getInvit/:id", authMiddleware, InvitationController.getInvitation);
+router.get("/getInvite/:id", authMiddleware, InvitationController.getInvitation);
 
 
 export default router;
