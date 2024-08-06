@@ -125,7 +125,7 @@ app.get("/", (req, res) => {
   logger.info("Welcome to Tasky!");
   return res
     .status(200)
-    .send("<h1> Welcome to Tasky Capstone Project @ AltSchool Africa! </h1>");
+    .send("<h1> Welcome to Taskly Capstone Project @ AltSchool Africa! </h1>");
 });
 
 app.get("/", (req, res) => {
