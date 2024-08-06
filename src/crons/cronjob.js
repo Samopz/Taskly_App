@@ -61,9 +61,8 @@ const checkTasks = async () => {
 };
 
 const startCronJob = () => {
-  cron.schedule(" * * * * *", checkTasks, {
-    // Run every minute
-    // Run every minute
+  cron.schedule(" *60 * * * *", checkTasks, { // Run every minute
+  
     timezone: "Africa/Lagos",
   });
   console.log("Cronjob is active");
