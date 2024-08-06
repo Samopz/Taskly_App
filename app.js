@@ -122,7 +122,7 @@ app.use(morgan("dev")); // log requests to the console
 })();
 
 app.get("/", (req, res) => {
-  logger.info("Welcome to Tasky!");
+  logger.info("Welcome to Taskly!");
   return res
     .status(200)
     .send("<h1> Welcome to Taskly Capstone Project @ AltSchool Africa! </h1>");
