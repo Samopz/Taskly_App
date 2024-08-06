@@ -76,3 +76,15 @@ Error: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.c
 2024-08-06 21:00:57 error: uncaughtException: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
 Error: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
     at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)
+2024-08-06 22:39:05 error: uncaughtException: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+Error: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)
+2024-08-06 22:45:37 error: uncaughtException: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+Error: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)
+2024-08-06 22:47:58 error: uncaughtException: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+Error: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)
+2024-08-06 22:57:41 error: uncaughtException: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+Error: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)
