@@ -3,13 +3,13 @@ import {
   registerController,
   loginController,
 } from "../controllers/authController.js";
-import { adminMiddleware } from "../middlewares/adminMiddleware.js";
+// import { adminMiddleware } from "../middlewares/adminMiddleware.js";
 
 const router = express.Router();
 
 //routes
 //REGISTER || POST
-router.post("/register", adminMiddleware, registerController);
+router.post("/register", registerController);
 
 // LOGIN || POST
 router.post("/login", loginController);
