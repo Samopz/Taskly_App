@@ -8,6 +8,7 @@ const router = express.Router();
 router.get("/getUser", authMiddleware, userController.getUser);
 router.get(
   "/getAllUsers",
+  authMiddleware,
   userController.getAllUsers,
   cacheGetAllUsers
 );

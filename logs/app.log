@@ -88,3 +88,39 @@ Error: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.c
 2024-08-06 22:57:41 error: uncaughtException: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
 Error: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
     at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)
+2024-08-06 23:11:24 error: uncaughtException: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+Error: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)
+2024-08-07 00:12:30 error: uncaughtException: Connection timeout
+Error: Connection timeout
+    at Socket.<anonymous> (C:\Users\Samopz\Taskly_App\node_modules\@redis\client\dist\lib\client\socket.js:177:124)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:589:8)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+2024-08-07 00:44:52 error: uncaughtException: Connection timeout
+Error: Connection timeout
+    at Socket.<anonymous> (C:\Users\Samopz\Taskly_App\node_modules\@redis\client\dist\lib\client\socket.js:177:124)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:589:8)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+2024-08-07 02:31:32 error: uncaughtException: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+Error: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)
+2024-08-07 19:40:25 error: uncaughtException: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+Error: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)
+2024-08-12 00:21:53 error: uncaughtException: Connection timeout
+Error: Connection timeout
+    at Socket.<anonymous> (C:\Users\Samopz\Taskly_App\node_modules\@redis\client\dist\lib\client\socket.js:177:124)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:589:8)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+2024-08-12 00:35:26 error: uncaughtException: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+Error: getaddrinfo ENOTFOUND redis-16273.c74.us-east-1-4.ec2.redns.redis-cloud.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)

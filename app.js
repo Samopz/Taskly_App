@@ -3,14 +3,14 @@ import bodyParser from "body-parser";
 import passport from "passport";
 import morgan from "morgan";
 import cors from "cors";
-import pkg from "express-openid-connect";
+// import pkg from "express-openid-connect";
 import path from "path";
 import { fileURLToPath } from "url";
 import { logger } from "./src/utils/logger.js";
 import { httpLogger } from "./src/utils/httpLogger.js";
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
-import auth0Middleware from "./src/middlewares/auth0/auth0.js";
+// import auth0Middleware from "./src/middlewares/auth0/auth0.js";
 
 // Construct __dirname in ES module scope
 const __filename = fileURLToPath(import.meta.url);
@@ -21,12 +21,10 @@ const app = express();
 app.use(httpLogger);
 
 // Auth0 Middleware
-app.use(auth0Middleware);
-const { requiresAuth } = pkg;
+// app.use(auth0Middleware);
+// const { requiresAuth } = pkg;
 
-
-// Defaults to in-memory store.
-// You can use redis or any other store.
+// Rate limiting middleware
 const limiter = rateLimit({
   windowMs: 0.5 * 60 * 1000, // 15 minutes
   max: 3, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
@@ -79,7 +77,7 @@ app.use(morgan("dev")); // log requests to the console
 (async () => {
   try {
     const authRoutes = await import("./src/routes/authRoutes.js");
-    app.use("/api/v1/auth", requiresAuth, authRoutes.default);
+    app.use("/api/v1/auth", authRoutes.default);
   } catch (error) {
     console.error("Failed to load auth routes:", error);
   }

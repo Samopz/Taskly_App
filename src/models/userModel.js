@@ -10,11 +10,11 @@ const userSchema = new mongoose.Schema(
     task: {
       date: {
         type: mongoose.Schema.Types.Date,
-        required: true,
+        required: false,
       },
       title: {
         type: String,
-        required: true,
+        required: false,
         trim: true,
       },
       description: {
