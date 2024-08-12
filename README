@@ -1,12 +1,25 @@
-Description:
+# TASKLY_APP CAPSTONE PROJECT
 
-TASKLY_APP
+TASKLY_APP is a task management application that helps users manage their tasks efficiently. It includes features such as task assignment, notifications for due dates, and rate limiting to prevent abuse.
 
-JavaScript framework TypeScript starter repository.
+## Features
 
-Installation
-$ npm install
-Running the app
+- **Task Assignment**: Assign tasks to users and notify them when they are assigned.
+- **Due Date Notifications**: Notify users when their tasks are due in 1 day, 12 hours, and 1 hour.
+- **Rate Limiting**: Prevent abuse by limiting the number of requests a user can make in a given time period.
+- **Authentication**: Secure the application using Auth0 middleware.
+
+Install dependencies:
+
+npm install
+
+Set up environment variables: Create a .env file in the root directory and add the following variables:
+
+AUTH0_DOMAIN=
+AUTH0_CLIENT_ID=
+AUTH0_CLIENT_SECRET=
+
+Start the application:
 # development
 $ npm run start
 
@@ -15,7 +28,36 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
-Test
+
+Usage
+
+API Endpoints:
+
+GET /tasks: Retrieve all tasks.
+
+POST /tasks: Create a new task.
+
+PUT /tasks/:id: Update a task.
+
+DELETE /tasks/:id: Delete a task.
+
+Example Request
+
+To create a new task:
+
+curl -X POST http://localhost:3000/tasks \
+  -H "Content-Type: application/json" \
+  -d '{
+        "title": "New Task",
+        "description": "Task description",
+        "dueDate": "2023-12-31T23:59:59Z",
+        "assignedTo": "userId"
+      }'
+
+Testing
+
+To run the tests, use the following command:
+
 # unit tests
 $ npm run test
 
@@ -24,36 +66,69 @@ $ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
-Support
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please read more here.
 
-Stay in touch
-Author - Kamil Myśliwiec
-Website - https://nestjs.com
-Twitter - @nestframework
+Project Structure
+
+TASKLY_APP/
+├── src/
+│   ├── crons/
+│   │   └── cronjob.js
+│   ├── middlewares/
+│   │   └── auth0/
+│   │       └── auth0.js
+│   ├── utils/
+│   │   ├── logger.js
+│   │   └── httpLogger.js
+│   ├── services/
+│   │   ├── userService.js
+│   │   └── emailService.js
+│   └── app.js
+├── tests/
+│   └── app.test.js
+├── .env
+├── package.json
+└── README.md
+
+Contributing
+
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature-branch).
+3. Make your changes.
+4. Commit your changes (git commit -m 'Add new feature').
+5. Push to the branch (git push origin feature-branch).
+6. Open a pull request.
+   
 License
-Nest is MIT licensed.
 
-About
-No description, website, or topics provided.
-Resources
- Readme
- Activity
-Stars
- 0 stars
-Watchers
- 1 watching
-Forks
- 0 forks
-Report repository
-Releases
-No releases published
-Packages
-No packages published
-Languages
-TypeScript
-98.3%
- 
-JavaScript
-1.7%
-Footer
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Contact
+For any inquiries, please contact samopzz@gmail.com.
+
+```
+
+Explanation:
+
+Features: Lists the main features of the application.
+
+Installation: Provides step-by-step
+instructions to set up the project.
+
+Usage: Describes how to use the API endpoints with an example request.
+
+Testing: Explains how to run the tests.
+
+Project Structure: Gives an overview of the project directory structure.
+
+Contributing: Provides guidelines for contributing to the project.
+
+License: Specifies the license under which the project is distributed.
+
+Contact: Provides contact information for inquiries.
+
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/samopz/TASKLY_APP.git
+   cd TASKLY_APP
