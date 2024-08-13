@@ -4,8 +4,8 @@ import passport from "passport";
 import morgan from "morgan";
 import cors from "cors";
 import pkg from "express-openid-connect";
-import path from "path";
-import { fileURLToPath } from "url";
+// import path from "path";
+// import { fileURLToPath } from "url";
 import { logger } from "./src/utils/logger.js";
 import { httpLogger } from "./src/utils/httpLogger.js";
 import rateLimit from "express-rate-limit";
@@ -13,8 +13,8 @@ import helmet from "helmet";
 import auth0Middleware from "./src/middlewares/auth0/auth0.js";
 
 // Construct __dirname in ES module scope
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 // Default app configurations
 const app = express();
@@ -36,7 +36,7 @@ const limiter = rateLimit({
 app.use(helmet());
 
 // middlewares
-app.use(express.static(path.join(__dirname, "./my-frontend/public"))); // serve static files
+// app.use(express.static(path.join(__dirname, "./my-frontend/public"))); // serve static files
 app.use(cors()); // enable cors
 app.use(express.json()); // parse application/json
 app.use(bodyParser.json()); // parse application/json
@@ -124,14 +124,13 @@ app.get("/", (req, res) => {
   return res
     .status(200)
     .send(
-      "<h1> Welcome to my Taskly_App Capstone Project @ AltSchool Africa!</h1>",
-      "<h2> Taskly is a robust Task Management system designed to streamline project management and team collaboration.<br> Featuring real - time updates, automated reminders, and comprehensive reporting. <br>Taskly ensures seamless task tracking and efficient workflow management, empowering teams to stay organized and productive.</h2 > "
+      "<h1> Welcome to my Taskly_App Capstone Project @ AltSchool Africa!<h1> <p>Taskly is a robust Task Management system designed to streamline project management and team collaboration. Featuring real - time updates, automated reminders, and comprehensive reporting. <br>Taskly ensures seamless task tracking and efficient workflow management, empowering teams to stay organized and productive.</p> "
     );
 });
 
-app.get("/", (req, res) => {
-  res.sendFile(join(__dirname, "./my-frontend/public/index.html"));
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(join(__dirname, "./my-frontend/public/index.html"));
+// });
 
 // // import/catch all routes
 // app.all("*", (req, res) => {
