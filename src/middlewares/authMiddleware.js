@@ -20,7 +20,7 @@ export const authMiddleware = async (req, res, next) => {
     console.log(error);
     res.status(500).send({
       success: false,
-      message: "Error In Auth Middleware",
+      message: "Error In Auth Middleware! You might need to review or provide Auth token if not provided!",
       error,
     });
   }
