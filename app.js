@@ -112,30 +112,31 @@ app.use(morgan("dev")); // log requests to the console
 
 (async () => {
   try {
-    const reportRoutes = await import("./src/routes/reportRoutes.js")
-    app.use("/api/v1/report", reportRoutes.default)
+    const reportRoutes = await import("./src/routes/reportRoutes.js");
+    app.use("/api/v1/report", reportRoutes.default);
   } catch (error) {
-    console.error("Failed to load reports routes:", error)
+    console.error("Failed to load reports routes:", error);
   }
 })();
 
 app.get("/", (req, res) => {
-  logger.info("Welcome to Taskly!");
+  logger.info("Welcome to Taskly_App!");
   return res
     .status(200)
-    .send("<h1> Welcome to Taskly Capstone Project @ AltSchool Africa! </h1>");
+    .send(
+      "<h1> Welcome to my Taskly_App Capstone Project @ AltSchool Africa!</h1>",
+      "<h2> Taskly is a robust Task Management system designed to streamline project management and team collaboration.<br> Featuring real - time updates, automated reminders, and comprehensive reporting. <br>Taskly ensures seamless task tracking and efficient workflow management, empowering teams to stay organized and productive.</h2 > "
+    );
 });
 
 app.get("/", (req, res) => {
   res.sendFile(join(__dirname, "./my-frontend/public/index.html"));
 });
 
-
 // // import/catch all routes
 // app.all("*", (req, res) => {
 //   logger.error("Route not found");
 //   res.status(404).json({ message: "Route not found" });
 // });
-
 
 export default app;
