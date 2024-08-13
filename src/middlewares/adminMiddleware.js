@@ -15,7 +15,7 @@ export const adminMiddleware = async (req, res, next) => {
     console.log(error);
     res.status(500).send({
       success: false,
-      message: "Un-Authorized Access",
+      message: "Un-Authorized Access, might be you're not an admin!",
       error,
     });
   }
