@@ -77,7 +77,7 @@ app.use(morgan("dev")); // log requests to the console
 (async () => {
   try {
     const authRoutes = await import("./src/routes/authRoutes.js");
-    app.use("/api/v1/auth", requiresAuth, authRoutes.default);
+    app.use("/api/v1/auth", authRoutes.default);
   } catch (error) {
     console.error("Failed to load auth routes:", error);
   }

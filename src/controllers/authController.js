@@ -5,9 +5,9 @@ import JWT from "jsonwebtoken";
 // Description: This file contains the auth controller functions.
 export const registerController = async (req, res) => {
   try {
-    const { username, email, password, phone, organizationId, boardId, answer } = req.body;
+    const { firstName, lastName, userName, email, password, phone, organizationId, boardId, answer } = req.body;
     //validation
-    if (!username || !email || !password || !organizationId || !phone || !boardId || !answer) {
+    if (!firstName || !lastName || !userName || !email || !password || !organizationId || !phone || !boardId || !answer) {
       return res.status(500).send({
         success: false,
         message: "Please Provide All Fields",
@@ -27,7 +27,9 @@ export const registerController = async (req, res) => {
 
     //create new user
     const user = await userModel.create({
-      username,
+      firstName,
+      lastName,
+      userName,
       email,
       password: hashedPassword,
       organizationId,
@@ -79,7 +81,7 @@ export const loginController = async (req, res) => {
     }
     // token
     const token = JWT.sign({ id: user._id }, process.env.JWT_SECRET, {
-      expiresIn: "7d",
+      expiresIn: "5m",
     });
     user.password = undefined;
     res.status(200).send({

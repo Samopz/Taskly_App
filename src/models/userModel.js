@@ -37,7 +37,15 @@ const userSchema = new mongoose.Schema(
         },
       ],
     },
-    username: {
+    firstName: {
+      type: String,
+      required: [true, "Please provide firstName"],
+    },
+    lastName: {
+      type: String,
+      required: [true, "Please provide lastName"],
+    },
+    userName: {
       type: String,
       required: [true, "Please provide a name"],
       trim: true,
@@ -79,7 +87,7 @@ const userSchema = new mongoose.Schema(
         "user",
       ],
     },
-    profile: {
+    profileImage: {
       type: String,
       default:
         "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png",
